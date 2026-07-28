@@ -1,3 +1,5 @@
+import {RandomFox} from '../components/RandomFox';
+
 export default function Home() {
   return (
     <div>
@@ -5,6 +7,8 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-blue-600">
           Tailwind is working!
         </h1>
+
+        <RandomFox />
       </main>
     </div>
   );
