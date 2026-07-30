@@ -18,11 +18,9 @@ export const FoxGallery = ({imageCount = 4}: Props): JSX.Element => {
         setImages(generateImages());
     }, [imageCount]);
 
-    return <div className="flex mb-4">
-                    {images.map((image, index) => (
-                        <div key={index} className="w-full bg-gray-500 h-12">
-                            <RandomFox image={image} />
-                        </div>
-                     ))}                
-            </div>
+    return  <div className="grid grid-cols-4 gap-4">
+        {images.map((image, index) => (
+            <RandomFox key={index} image={image} />
+        ))}
+        </div>
 }

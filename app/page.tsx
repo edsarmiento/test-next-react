@@ -6,7 +6,6 @@ import { CustomButton } from '../components/CustomButton'
 
 export default function Home() {
   const [buttonState, setButtonState] = useState<boolean>(false);
-  const [imagesKey, setImagesKey] = useState<number>(0);
   const [imageCount, setImageCount] = useState<number>(4);
 
   return (
@@ -23,10 +22,10 @@ export default function Home() {
             /> 
 
             <CustomButton
-              myText={buttonState ? "refresh!" : "refreshed!"}
+              myText={buttonState ? "refreshed!" : "refresh!" }
               onClick={() => {
                 setButtonState(!buttonState);
-                setImagesKey(prev => prev + 1);
+                setImageCount(prev => 4);
             }}
             />
 
@@ -38,8 +37,8 @@ export default function Home() {
             />  
 
           </div>
-          <div className="flex justify-center items-center">
-            <FoxGallery key={imagesKey} imageCount={imageCount} />
+          <div>
+            <FoxGallery imageCount={imageCount} />
           </div>
         </div>
       </main>
