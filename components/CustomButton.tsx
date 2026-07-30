@@ -1,22 +1,19 @@
 import {JSX} from 'react';
-import {useState} from 'react';
 
-type Props = {myText: string}
+type Props = {
+  myText: string;
+  onClick: () => void; // solo pasas la función para cambiar estado
+};
 
-export const CustomButton = ({ myText }: Props): JSX.Element => {
-  
-  const [buttonState, setButtonState] = useState(false);
-    
-  return <div>
-    <button 
-      className="text-white bg-blue-700"
-      onClick={() => (setButtonState(!buttonState))}
-    >
-      {myText}
+export const CustomButton = ({ myText, onClick }: Props): JSX.Element => {
+  return (
+    <div>
+      <button
+        className="text-white bg-blue-700"
+        onClick={onClick}
+      >
+        {myText}
     </button>
-
-    <p>
-      {buttonState ? "clicked" : "to click"}
-    </p>
-  </div>  
-}
+    </div>
+  );
+};
