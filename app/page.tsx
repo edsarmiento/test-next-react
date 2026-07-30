@@ -21,7 +21,7 @@ export default function Home() {
             }}
           />  
           </div>
-          <div>
+          <div className="flex justify-center items-center">
             <FoxGallery key={imagesKey} />
           </div>
         </div>
