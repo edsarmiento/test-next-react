@@ -15,12 +15,11 @@ export const FoxGallery = (): JSX.Element => {
         setImages(generateImages());
     }, []);
 
-
-    return <div>
-        {images.map((image, index) => (
-            <div key={index} className="p-7">
-                <RandomFox image={image} />
+    return <div className="flex mb-4">
+                    {images.map((image, index) => (
+                        <div key={index} className="w-full bg-gray-500 h-12">
+                            <RandomFox image={image} />
+                        </div>
+                     ))}                
             </div>
-        ))}
-    </div>
 }

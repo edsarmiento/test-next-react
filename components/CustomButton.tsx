@@ -9,7 +9,7 @@ export const CustomButton = ({ myText, onClick }: Props): JSX.Element => {
   return (
     <div>
       <button
-        className="text-white bg-blue-700"
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-7 rounded"
         onClick={onClick}
       >
         {myText}
