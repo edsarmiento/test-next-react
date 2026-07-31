@@ -13,15 +13,19 @@ export const Incrementer = () => {
   }, [counter]);
 
   return <div>
-    <div className="flex items-center justify-center">
-    <button
-            className="bg-green-500 hover:bg-green-800 text-white font-bold py-2 px-4 rounded"
-            onClick={ incrementar }
-        >
-        incrementar
-    </button>
+    <div className="flex flex-col items-center justify-center py-4">
+        <div>
+            <p className="font-bold py-4">{counter}</p>
+        </div>
 
-        <p className="font-bold py-4" >{counter}</p>
+        <div>
+            <button
+                className="bg-green-500 hover:bg-green-800 text-white font-bold py-2 px-4 rounded"
+                onClick={incrementar}
+            >
+            Incrementar
+            </button>
+        </div>
     </div>
   </div>
 }

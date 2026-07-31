@@ -13,12 +13,14 @@ export default function Home() {
     <div>
       <main className="flex min-h-screen items-center justify-center">        
         <div>
+       <Incrementer/>
+
           <div className="flex items-center justify-center pb-8">
 
             <CustomButton
               myText="-"
               onClick={() => {
-                setImageCount(prev => prev - 1);
+                setImageCount(prev => prev >= 1 ? prev - 1 : 0);
             }}
             /> 
 
@@ -38,8 +40,6 @@ export default function Home() {
             />
 
           </div>
-
-          <Incrementer/>
 
           <div>
             <FoxGallery imageCount={imageCount} />
