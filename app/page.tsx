@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { FoxGallery } from '../components/FoxGallery'
 import { CustomButton } from '../components/CustomButton'
+import { Incrementer } from '../components/Incrementer'
 
 export default function Home() {
   const [buttonState, setButtonState] = useState<boolean>(false);
@@ -34,9 +35,12 @@ export default function Home() {
               onClick={() => {
                 setImageCount(prev => prev + 1);
             }}
-            />  
+            />
 
           </div>
+
+          <Incrementer/>
+
           <div>
             <FoxGallery imageCount={imageCount} />
           </div>
