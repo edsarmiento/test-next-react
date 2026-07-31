@@ -5,11 +5,11 @@ export const MyCounterComponent = () => {
   const [counter, setCounter] = useState<number>(0);
 
   const incrementar: React.MouseEventHandler<HTMLButtonElement> = () => {   
-    setCounter(prev => prev + 1);
+    setCounter(prev => prev  + 1);
   };
 
   const decrementar: React.MouseEventHandler<HTMLButtonElement> = () => {   
-    setCounter(prev => prev - 1);
+    setCounter(prev => prev >= 1 ? prev - 1 : 0);
   };
 
   useEffect(() => {

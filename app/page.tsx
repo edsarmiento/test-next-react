@@ -25,7 +25,7 @@ export default function Home() {
             /> 
 
             <CustomButton
-              myText={buttonState ? "refreshed!" : "refresh!" }
+              myText={buttonState ? "images refreshed!" : "refresh images!" }
               onClick={() => {
                 setButtonState(!buttonState);
                 setImageCount(prev => 4);
