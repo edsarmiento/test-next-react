@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { FoxGallery } from '../components/FoxGallery'
 import { CustomButton } from '../components/CustomButton'
-import { Incrementer } from '../components/Incrementer'
+import { MyCounterComponent } from '../components/MyCounterComponent'
 
 export default function Home() {
   const [buttonState, setButtonState] = useState<boolean>(false);
@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       <main className="flex min-h-screen items-center justify-center">        
         <div>
-       <Incrementer/>
+       <MyCounterComponent/>
 
           <div className="flex items-center justify-center pb-8">
 

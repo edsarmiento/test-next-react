@@ -1,11 +1,15 @@
 import {useState, useEffect} from 'react'
 
-export const Incrementer = () => {
+export const MyCounterComponent = () => {
 
   const [counter, setCounter] = useState<number>(0);
 
   const incrementar: React.MouseEventHandler<HTMLButtonElement> = () => {   
     setCounter(prev => prev + 1);
+  };
+
+  const decrementar: React.MouseEventHandler<HTMLButtonElement> = () => {   
+    setCounter(prev => prev - 1);
   };
 
   useEffect(() => {
@@ -24,6 +28,13 @@ export const Incrementer = () => {
                 onClick={incrementar}
             >
             Incrementar
+            </button>
+
+            <button
+                className="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"
+                onClick={decrementar}
+            >
+            Decrementar
             </button>
         </div>
     </div>
